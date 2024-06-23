@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .c1{
+            display: grid;
+            grid-template-areas: 
+            "navbar navbar"
+            "aside main"
+            "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr;
+            height: 80vh;
+            width: 80vw;
+            border: 2px solid #000;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px #333;
+        }
+        .navbar, .aside, .main, .footer, .section{
+            border: 1px solid #000;
+        }
+        .navbar{
+            grid-area: navbar;
+            background-color: skyblue;
+            padding: 20px;
+            text-align: center;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: blanchedalmond;
+            padding: 20px;
+        }
+        .main{
+            grid-area: main;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;        
+        }
+        .section{
+            background-color: blanchedalmond;
+            padding: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: skyblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <header class="navbar">nav</header>
+        <aside class="aside">aside</aside>
+        <main class="main">
+        <section class="section">section</section>
+    </main>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html> 
